@@ -1,7 +1,6 @@
 package com.example.stockmarketapp.di
 
 import android.app.Application
-import androidx.room.PrimaryKey
 import androidx.room.Room
 import com.example.stockmarketapp.data.local.StockDatabase
 import com.example.stockmarketapp.data.remote.StockApi
@@ -30,7 +29,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideStockDatabase(app:Application): StockDatabase {
+    fun provideStockDatabase(app: Application): StockDatabase {
         return Room.databaseBuilder(
             app,
             StockDatabase::class.java,

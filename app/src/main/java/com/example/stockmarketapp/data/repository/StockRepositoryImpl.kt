@@ -62,7 +62,7 @@ class StockRepositoryImpl @Inject constructor(
                     listings.map { it.toCompanyListingEntity() }
                 )
                 emit(Resource.Success(
-                    dao.searchCompanyListing("").map {
+                    data = dao.searchCompanyListing("").map {
                         it.toCompanyListing()
                     }
                 ))
